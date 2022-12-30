@@ -31,6 +31,7 @@
 
 <body>
 
+
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex flex-column align-items-center">
@@ -54,14 +55,11 @@
           <h4>Seconds</h4>
         </div>
       </div>
-      <audio id="myAudio" controls>
-  <source src="https://karthikeditz.github.io/assets/media/song.mp3" type="audio/mpeg">
+      
+      <audio autoplay="autoplay" hidden="hidden">
+<source src="https://karthikeditz.github.io/assets/media/song.mp3" type="audio/mpeg">
 
 </audio>
-      window.onload = function() {
-  var audio = document.getElementById("myAudio");
-  audio.play();
-}
             
 <!-- =======================================================
       <div class="subscribe">
@@ -198,7 +196,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-      <audio autoplay="autoplay" hidden="hidden" src="https://karthikeditz.github.io/assets/media/song.mp3"></audio>
+      
 
 </body>
 
