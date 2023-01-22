@@ -82,33 +82,7 @@
       </div>
 
     </div>
-<div id="pins"></div>
 
-<script>
-  var request = new XMLHttpRequest();
-  var endpoint = "https://api.pinterest.com/v1/pins/";
-
-  request.open("GET", endpoint, true);
-  request.setRequestHeader("Authorization", "pina_AMAUVIYWABGQ6AQAGDAH2D5TWORNPBIBQBIQD2MWMKKLXO2LIMTJWDRH276NG3BEANYEA4OYIRFTYXM3PWMVJX3ZXLEIPOYA");
-
-  request.onreadystatechange = function() {
-    if (request.readyState === 4 && request.status === 200) {
-      var data = JSON.parse(request.responseText);
-      var pins = data.data;
-      var html = "";
-      for(var i = 0; i < pins.length; i++) {
-        var pin = pins[i];
-        html += "<div>";
-        html += "<img src='" + pin.image.original.url + "' alt='" + pin.description + "'>";
-        html += "<p>" + pin.description + "</p>";
-        html += "</div>";
-      }
-      document.getElementById("pins").innerHTML = html;
-    }
-  };
-
-  request.send();
-</script>
 
   </header><!-- End #header -->
 
